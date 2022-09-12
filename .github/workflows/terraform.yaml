@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - id: Github App Token
+      - id: Token
         run: |
           echo "Getting the token"
           echo ${{ secrets.GH_ACCESS_TOKEN }}
