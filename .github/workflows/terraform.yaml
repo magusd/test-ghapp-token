@@ -1,0 +1,19 @@
+name: terraform
+on:
+  push:
+    branches:
+      - "*"
+
+env:
+  TERRAFORM_VERSION: "1.2.8"
+
+jobs:
+  fmt:
+    name: terraform fmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - id: Github App Token
+        run: |
+          echo "Getting the token"
+          echo ${{ secrets.GH_ACCESS_TOKEN }}
